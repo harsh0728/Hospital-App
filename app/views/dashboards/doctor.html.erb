@@ -1,0 +1,10 @@
+<h1>Doctor Dashboard</h1>
+
+<h2>Patients Registered per Day</h2>
+<%= line_chart @patient_count_by_day %>
+
+<ul>
+  <% @patients.each do |patient| %>
+    <li><%= patient.id %> . <%= patient.name %> - <%= patient.age %></li>
+  <% end %>
+</ul>
